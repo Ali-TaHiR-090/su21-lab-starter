@@ -41,7 +41,8 @@ int main(int argc, char **argv) {
     /* TODO: Think of a scenario that is not tested by the current test cases. Create one additional test case to test this scenario. */
 
     DNA_sequence dna_seq_3;
-    strcpy(dna_seq_3.sequence, "ATGCGTACGTACGCNFUEDJ"); // test if 
+    strcpy(dna_seq_3.sequence, "ATGCGTACGTACGCNFUEDJ"); // test for invalid characters
+    // Note: The function should ignore invalid characters, so we expect counts for valid nucleotides only.
     compute_nucleotide_occurrences(&dna_seq_3);
     assert(dna_seq_3.A_count == 3);
     assert(dna_seq_3.C_count == 4);
